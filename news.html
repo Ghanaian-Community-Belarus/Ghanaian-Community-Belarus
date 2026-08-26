@@ -24,7 +24,7 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1;
     }
 
     a { color: var(--red); text-decoration: none; }
@@ -80,12 +80,12 @@
     }
     section h2 {
       margin-top: 0;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
     .card {
       background: var(--white);
@@ -131,6 +131,33 @@
     font-size: 1rem;
   }
 }
+ul {
+  margin: 0 0 0.6rem 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0 0 0.3rem 0;
+  line-height: 1.4;
+}
+.article-figure {
+  margin: 0.8rem 0;
+}
+
+.article-image {
+  max-width: 100%;      /* never wider than the article */
+  width: 100%;          /* fill the article width up to 1280px */
+  height: auto;         /* keep 1280×960 aspect ratio */
+  display: block;
+  border-radius: 8px;
+}
+
+.article-caption {
+  margin: 0.4rem 0 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
   </style>
 </head>
 <body>
@@ -167,6 +194,28 @@
       </p>
 
       <div id="feed-container" class="grid">
+        <h1><b>HEADLINE:</b></h1>
+        <h2>  Ghana Community in Belarus Holds First Executive Meeting</h2>
+        <p class="article-date"><b>Date:</b> Auguest 25,2026 |Minsk,Belarus.</p>
+        <p>Article</p>
+        <p>The newly elected Executive of the Ghana Community in Belarus successfully held its first executive meeting yesterday, August 25, 2026, in Minsk.</p>
+        <p>The meeting was chaired by the President, Dr. Sampson Kofi Asamoah ,and was attended by all executive members. The purpose of the meeting was to set the tone for the new administration and to deliberate on strategic plans for the welfare and growth of the community.</p>
+        <h3>Key issues discussed included:</h3>
+        <ul>
+          <li>Reaching out and Strengthening unity among Ghanaians in Belarus</li>
+          <li>Welfare and support systems for members</li>
+          <li>Community engagement and cultural activities</li>
+          <li>Collaboration with relevant authorities and stakeholders</li>
+          <li>Plans for upcoming community programs</li>
+        </ul>
+        <p>The executive reaffirmed its commitment to transparent, inclusive, and service-oriented leadership.</p>
+        <p>The Ghana Community in Belarus appreciates the continued support of its members and looks forward to a productive year of unity and progress.</p>
+        <figure class="article-figure">
+        <img scr="article/community.jpeg"
+         alt="Image taken during the meeting"
+          class="article-image">
+        <figcaption class="article-caption">Image taken during the meeting</figcaption>
+        </figure>
         <p>Loading news…</p>
       </div>
     </div>
