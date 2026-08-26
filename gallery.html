@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ghanaian Community in Belarus – Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --red: #ce1126;
+      --gold: #fcd116;
+      --green: #006b3f;
+      --bg: #f7f7f7;
+      --text: #222;
+      --muted: #555;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--red), var(--gold), var(--green));
+      color: var(--white);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--white);
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      background: rgba(255,255,255,0.18);
+      text-decoration: none;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .photo-card {
+      background: var(--white);
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 220px;
+      display: block;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .photo-card p {
+      padding: 12px 14px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .empty-photo {
+      height: 220px;
+      display: grid;
+      place-items: center;
+      color: #777;
+      background: #e7e7e7;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 24px 0;
+      margin-top: 24px;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">Ghanaian Community in Belarus</a>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="business.html">Business & Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container">
+      <h1>Community Gallery</h1>
+      <p class="intro">
+        Photos from our community events, meetings, cultural celebrations, sports activities,
+        and student life in Belarus.
+      </p>
+
+      <div class="gallery-grid">
+
+        <!-- Replace each empty-photo block with an image when available -->
+        <div class="photo-card">
+          <div class="empty-photo">Add event photo here</div>
+          <p>Community Meeting – Minsk</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="empty-photo">Add event photo here</div>
+          <p>Ghanaian Cultural Celebration</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="empty-photo">Add event photo here</div>
+          <p>Football and Sports Day</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="empty-photo">Add event photo here</div>
+          <p>Student Networking Event</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="empty-photo">Add event photo here</div>
+          <p>Community Support Session</p>
+        </div>
+
+        <div class="photo-card">
+          <img src="football-day.jpg" alt="Community football day in Minsk" />
+          <p>End-of-Year Celebration</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>
+      <a href="index.html">Home</a> •
+      <a href="news.html">News</a> •
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a> •
+      <a href="gallery.html">Gallery</a> •
+      <a href="support.html">Support</a> •
+      <a href="business.html">Business & Education</a> •
+      <a href="contact.html">Contact</a>
+    </p>
+
+    <p class="small">
+      Ghanaian Community in Belarus •
+      Email: ghanacommunityby@gmail.com
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

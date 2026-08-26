@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ghanaian Community in Belarus – Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --red: #ce1126;
+      --gold: #fcd116;
+      --green: #006b3f;
+      --black: #000000;
+      --bg: #f7f7f7;
+      --text: #222;
+      --muted: #555;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--red), var(--gold), var(--green));
+      color: var(--white);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .menu {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .menu a {
+      color: var(--white);
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .menu a:hover {
+      background: rgba(255,255,255,0.18);
+      text-decoration: none;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    .event {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 14px;
+      background: var(--white);
+      border: 1px solid #eee;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .event .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 24px 0;
+      margin-top: 24px;
+    }
+    footer a { color: #fff; }
+    .small { font-size: 0.9rem; color: #bbb; }
+
+    @media (min-width: 700px) {
+      .event {
+        grid-template-columns: 120px 1fr;
+        align-items: start;
+      }
+      .event .date {
+        background: #f0f0f0;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">Ghanaian Community in Belarus</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="business.html">Business & Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <p class="small">
+        Inspired by diaspora community models: sports, cultural nights, and embassy engagements.
+      </p>
+      <!----
+      <div class="event">
+        <div class="date">
+          <div>20 SEP</div>
+          <div class="meta">2026 • 14:00</div>
+        </div>
+        <div>
+          <h3>All‑Soccer Unity Tournament (ASUT‑1)</h3>
+          <p class="meta">Minsk • Football field near Nemiga River</p>
+          <p>
+            Community football tournament to bring together Ghanaians and friends.
+            Teams, referees, and small prizes. Open to all skill levels.
+          </p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">
+          <div>10 OCT</div>
+          <div class="meta">2026 • 18:00</div>
+        </div>
+        <div>
+          <h3>Cultural Night & Networking</h3>
+          <p class="meta">Minsk • Community hall</p>
+          <p>
+            Food, music, short talks by students and professionals, and a mini‑expo
+            of Ghanaian businesses and services in Belarus.
+          </p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">
+          <div>15 NOV</div>
+          <div class="meta">2026 • 17:00</div>
+        </div>
+        <div>
+          <h3>Consular Day & Q&A with Embassy</h3>
+          <p class="meta">Online (Zoom) + Minsk venue</p>
+          <p>
+            Special engagement with the Embassy of Ghana (accredited to Belarus) on passports, IDs,
+            notarization, and general diaspora Q&A.
+          </p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">
+          <div>28 DEC</div>
+          <div class="meta">2026 • 19:00</div>
+        </div>
+        <div>
+          <h3>End‑of‑Year Celebration</h3>
+          <p class="meta">Minsk • Banquet hall</p>
+          <p>
+            Awards, performances, and reflections on the year.
+            A chance to celebrate together as a community family.
+          </p>
+        </div>
+      </div>
+    -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <strong>Ghanaian Community in Belarus</strong>
+        <p class="small">
+          Your home away from home. Culture, support, and opportunity for Ghanaians and friends in Belarus.
+        </p>
+      </div>
+      <div>
+        <strong>Quick links</strong>
+        <p>
+          <a href="index.html">Home</a> •
+          <a href="news.html">News</a> •
+          <a href="about.html">About</a> •
+          <a href="events.html">Events</a> •
+          <a href="gallery.html">Gallery</a> •
+          <a href="support.html">Support</a> •
+          <a href="business.html">Business & Education</a> •
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="small">
+          Email: ghanacommunityby@gmail.com
+        </p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:16px;">
+      Context: Belarus–Ghana high‑level talks and a joint trade committee.
+      Ghanaian students are a key part of the community in Belarus.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

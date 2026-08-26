@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ghanaian Community in Belarus – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --red: #ce1126;
+      --gold: #fcd116;
+      --green: #006b3f;
+      --black: #000000;
+      --bg: #f7f7f7;
+      --text: #222;
+      --muted: #555;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--red), var(--gold), var(--green));
+      color: var(--white);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .menu {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .menu a {
+      color: var(--white);
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .menu a:hover {
+      background: rgba(255,255,255,0.18);
+      text-decoration: none;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 24px 0;
+      margin-top: 24px;
+    }
+    footer a { color: #fff; }
+    .small { font-size: 0.9rem; color: #bbb; }
+    /* Community contacts */
+#community-contacts {
+  background: #fff;
+  padding: 70px 0;
+}
+
+.contacts-title {
+  background: var(--gold);
+  color: #222;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 35px 10px;
+  margin: 0 0 70px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.contact-card {
+  padding: 10px 0;
+}
+
+.contact-card h3 {
+  color: #666;
+  font-size: 1.8rem;
+  margin: 0 0 12px;
+}
+
+.contact-card p {
+  color: #777;
+  font-size: 1.5rem;
+  margin: 0 0 18px;
+}
+
+.contact-card a {
+  color: #777;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .contacts-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 1.2rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">Ghanaian Community in Belarus</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="business.html">Business & Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container">
+      <h2>Contact & Join</h2>
+      <p>
+        Fill in the form to join our mailing list and WhatsApp/Telegram groups.
+        We’ll share events, consular updates, and community news.
+      </p>
+
+      <!-- REPLACE YOUR_FORM_ID WITH YOUR REAL GOOGLE FORM EMBED ID -->
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScXEHSVtAv_dRz0-UpCYv6T4W3xdmyTjJZbStwABubHFWjXgw/viewform?usp=header&hl=en"
+        width="100%"
+        height="680"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border-radius:10px; border:1px solid #eee; background:#fff;"
+      >
+        Loading…
+      </iframe>
+
+      <p class="small" style="margin-top:10px;">
+        Your responses are stored securely in Google Forms and sent to our community email.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CONTACTS -->
+<section id="community-contacts">
+  <div class="container">
+    <h2 class="contacts-title">Contacts</h2>
+
+    <div class="contacts-grid">
+
+      <div class="contact-card">
+        <h3>Sampson Asamoah</h3>
+        <p>President</p>
+        <a href="tel:+375257044795">+375257044795</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Araba Sompa Minai</h3>
+        <p>Vice President</p>
+        <a href="tel:+375298624284">+375298624284</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Vibha Arthur</h3>
+        <p>Secretary</p>
+        <a href="tel:+375259471685">+375259471685</a>
+      </div>
+      <a href="mailto:ghanacommunityby@gmail.com">
+      ghanacommunityby@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <strong>Ghanaian Community in Belarus</strong>
+        <p class="small">
+          Your home away from home. Culture, support, and opportunity for Ghanaians and friends in Belarus.
+        </p>
+      </div>
+      <div>
+        <strong>Quick links</strong>
+        <p>
+          <a href="index.html">Home</a> •
+          <a href="news.html">News</a> •
+          <a href="about.html">About</a> •
+          <a href="events.html">Events</a> •
+          <a href="gallery.html">Gallery</a> •
+          <a href="support.html">Support</a> •
+          <a href="business.html">Business & Education</a> •
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="small">
+          Email: ghanacommunityby@gmail.com
+        </p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:16px;">
+      Context: Belarus–Ghana high‑level talks and a joint trade committee.
+      Ghanaian students are a key part of the community in Belarus.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

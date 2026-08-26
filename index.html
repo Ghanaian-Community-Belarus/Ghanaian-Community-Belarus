@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ghanaian Community in Belarus – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ghanaian Community in Belarus – events, support, culture, and networking for Ghanaians and friends in Belarus." />
+  <style>
+    :root {
+      --red: #ce1126;
+      --gold: #fcd116;
+      --green: #006b3f;
+      --black: #000000;
+      --bg: #f7f7f7;
+      --text: #222;
+      --muted: #555;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, var(--red), var(--gold), var(--green));
+      color: var(--white);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .menu {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .menu a {
+      color: var(--white);
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .menu a:hover {
+      background: rgba(255,255,255,0.18);
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--white);
+      padding: 40px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    .hero p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      max-width: 720px;
+    }
+    .hero .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    .btn.secondary {
+      background: var(--green);
+    }
+    .btn:hover {
+      filter: brightness(0.95);
+      text-decoration: none;
+    }
+
+    /* Sections */
+    section {
+      padding: 32px 0;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+    }
+
+    /* Events */
+    .event {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 14px;
+      background: var(--white);
+      border: 1px solid #eee;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .event .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Contact form */
+    form {
+      background: var(--white);
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 6px;
+      font-weight: 600;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 24px 0;
+      margin-top: 24px;
+    }
+    footer a { color: #fff; }
+    .small { font-size: 0.9rem; color: #bbb; }
+
+    @media (min-width: 700px) {
+      .event {
+        grid-template-columns: 120px 1fr;
+        align-items: start;
+      }
+      .event .date {
+        background: #f0f0f0;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">Ghanaian Community in Belarus</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="business.html">Business & Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Ghanaian Community in Belarus</h1>
+      <p>
+        Your home away from home. We connect Ghanaians studying, working, and living in Belarus
+        through culture, mutual support, events, and partnerships with universities and businesses.
+      </p>
+      <div class="cta">
+        <a href="contact.html" class="btn">Join the Community</a>
+        <a href="events.html" class="btn secondary">See Upcoming Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORT INTRO -->
+  <section>
+    <div class="container">
+      <h2>Welcome</h2>
+      <p>
+        This is the official community site for Ghanaians and friends in Belarus.
+        Explore our activities, support services, and ways to get involved.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <strong>Ghanaian Community in Belarus</strong>
+        <p class="small">
+          Your home away from home. Culture, support, and opportunity for Ghanaians and friends in Belarus.
+        </p>
+      </div>
+      <div>
+        <strong>Quick links</strong>
+        <p>
+          <a href="index.html">Home</a> •
+          <a href="news.html">News</a> •
+          <a href="about.html">About</a> •
+          <a href="events.html">Events</a> •
+          <a href="gallery.html">Gallery</a> •
+          <a href="support.html">Support</a> •
+          <a href="business.html">Business & Education</a> •
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="small">
+          Email: ghanacommunityby@gmail.com
+        </p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:16px;">
+      Context: Belarus–Ghana high‑level talks and a joint trade committee.
+      Ghanaian students are a key part of the community in Belarus.
+    </p>
+  </div>
+</footer>
+
+<!-- RSS FEED SCRIPT (used on news.html too) -->
+<script>
+  const RSS_URL = "https://rss.app/feeds/your-feed-id.xml";
+  const CONTAINER = document.getElementById("feed-container");
+
+  async function loadFeed() {
+    if (!CONTAINER) return; // not on news page
+    try {
+      const proxy = "https://api.allorigins.win/raw?url=";
+      const res = await fetch(proxy + encodeURIComponent(RSS_URL));
+      if (!res.ok) throw new Error("Network response was not ok");
+      const text = await res.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, "application/xml");
+
+      const items = Array.from(xml.querySelectorAll("item")).slice(0, 6);
+
+      if (!items.length) {
+        CONTAINER.innerHTML = "<p>No news items found.</p>";
+        return;
+      }
+
+      CONTAINER.innerHTML = "";
+      items.forEach(item => {
+        const title = item.querySelector("title")?.textContent || "Untitled";
+        const link = item.querySelector("link")?.textContent || "#";
+        const desc = item.querySelector("description")?.textContent || "";
+        const pub = item.querySelector("pubDate")?.textContent || "";
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
+          <p class="meta">${pub ? new Date(pub).toLocaleDateString() : ""}</p>
+          <p>${stripHtml(desc).slice(0, 160)}${desc.length > 160 ? "…" : ""}</p>
+        `;
+        CONTAINER.appendChild(card);
+      });
+    } catch (err) {
+      console.error(err);
+      CONTAINER.innerHTML = "<p>Unable to load news right now.</p>";
+    }
+  }
+
+  function stripHtml(html) {
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
+  }
+
+  document.addEventListener("DOMContentLoaded", loadFeed);
+</script>
+
+</body>
+</html>
