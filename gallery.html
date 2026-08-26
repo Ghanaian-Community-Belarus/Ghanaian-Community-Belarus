@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Ghanaian Community in Belarus – Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="image/main.png">
   <style>
     :root {
       --red: #ce1126;
@@ -150,13 +151,45 @@
       font-size: 0.9rem;
       color: #bbb;
     }
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+}
+
+@media (max-width: 700px) {
+  .site-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+}
   </style>
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <a class="brand" href="index.html">Ghanaian Community in Belarus</a>
+    <a class="brand" href="index.html">
+  <img
+     src="image/ghana1.jpg"
+    alt="Ghanaian Community in Belarus logo"
+    class="site-logo"
+  />
+  <span>Ghanaian Community in Belarus</span>
+</a>
 
     <nav class="menu">
       <a href="index.html">Home</a>
