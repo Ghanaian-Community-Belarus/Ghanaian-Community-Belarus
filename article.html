@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Story...</title>
+    <style>
+    :root{
+        --green:green;
+        --white:white;
+    }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+    header {
+        background: linear-gradient(90deg,  var(--green));
+      color: var(--white);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .menu {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .menu a {
+      color: var(--white);
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .menu a:hover {
+      background: rgba(255,255,255,0.18);
+      text-decoration: none;
+    }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+            color: #111111; 
+            line-height: 1.6; 
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-bottom: 30px; 
+            color: #4a7751; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        .back-btn:hover { text-decoration: underline; }
+        h1 { font-size: 38px; line-height: 1.2; text-transform: uppercase; margin-bottom: 15px; font-weight: 700; }
+        .date { color: #666; font-size: 14px; margin-bottom: 25px; }
+        .main-image { width: 100%; max-height: 450px; object-fit: cover; margin-bottom: 30px; background: #f5f5f5; }
+        #article-content p { font-size: 18px; color: #333333; margin-bottom: 20px; }
+        
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 24px 0;
+      margin-top: 24px;
+    }
+    footer a { color: #fff; }
+    .small { font-size: 0.9rem; color: #bbb; }
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 700px) {
+  .site-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+}
+ul {
+  margin: 0 0 0.6rem 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0 0 0.3rem 0;
+  line-height: 1.4;
+}
+    </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+  <img
+     src="images/ghana1.jpg"
+    alt="Ghanaian Community in Belarus logo"
+    class="site-logo"
+  />
+  <span>Ghanaian Community in Belarus</span>
+</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="business.html">Business & Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+    <!-- Simple navigation link to head back to home page list -->
+    <a href="news.html" class="back-btn">← Back to News Feed</a>
+
+    <!-- Empty dynamic slots ready for content strings -->
+    <h1 id="article-title">Loading...</h1>
+    <div id="article-date" class="date"></div>
+    <img id="article-image" class="main-image" src="" alt="">
+    
+    <hr style="border: 0; border-top: 1px solid #eaeaea; margin-bottom: 30px;">
+    
+    <div id="article-content"></div>
+
+    <script>
+        // 1. Read the address bar parameters to extract the ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        // 2. Load up your json file collection
+        fetch('article.json')
+            .then(response => response.json())
+            .then(articles => {
+                // 3. Find the dictionary row matching the ID parameter string
+                const matchedArticle = articles.find(a => a.id === articleId);
+
+                if (matchedArticle) {
+                    // 4. Populate standard placeholder structures
+                    document.title = matchedArticle.title;
+                    document.getElementById('article-title').innerText = matchedArticle.title;
+                    document.getElementById('article-date').innerText = matchedArticle.date;
+                    document.getElementById('article-image').src = matchedArticle.image;
+                    
+                    // innerHTML lets any HTML block text formatting inside the json string draw beautifully
+                    document.getElementById('article-content').innerHTML = matchedArticle.content;
+                } else {
+                    document.getElementById('article-title').innerText = "Article Not Found";
+                }
+            })
+            .catch(error => console.error("Error drawing article page components:", error));
+    </script>
+</body>
+</html>
