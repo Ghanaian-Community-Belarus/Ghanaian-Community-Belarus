@@ -7,8 +7,14 @@
     <link rel="icon" type="images/png" href="images/main.png?v=2">
     <style>
     :root{
-        --green:green;
-        --white:white;
+        --red: #ce1126;
+      --gold: #fcd116;
+      --green: #006b3f;
+      --black: #000000;
+      --bg: #f7f7f7;
+      --text: #222;
+      --muted: #555;
+      --white: #fff;
     }
         * { box-sizing: border-box; margin: 0; padding: 0; }
     header {
@@ -19,6 +25,7 @@
       top: 0;
       z-index: 10;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      width: 100%;
     }
     .nav {
       display: flex;
@@ -26,6 +33,7 @@
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
+      padding: 0 20px;
     }
     .brand {
       font-size: 1.25rem;
@@ -52,8 +60,8 @@
 
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
-            max-width: 800px; 
-            margin: 40px auto; 
+            max-width: 100%; 
+            margin: 0px auto; 
             padding: 0 20px; 
             color: #111111; 
             line-height: 1.6; 
