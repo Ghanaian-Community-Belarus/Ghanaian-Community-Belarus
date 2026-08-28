@@ -230,6 +230,54 @@
     font-size: 1rem;
   }
 }
+/* 1. Ensure the parent element handles relative positioning bounds */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 2. 🔒 FORCE the submenu into a clean, floating vertical layout block */
+.dropdown-menu {
+    display: none;             /* Hidden by default */
+    position: absolute;        /* FLOATS over content—won't push navbar items */
+    top: 100%;                 /* Snaps right below ABOUT US */
+    left: 0;
+    background-color: #ffffff; /* Clean white card box background */
+    min-width: 220px;          /* Width size of the dropdown container panel */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15); /* Drop shadow overlay effect */
+    border-radius: 6px;        /* Clean slightly rounded frame edges */
+    padding: 8px 0;
+    z-index: 9999;             /* Forces it on top of all text and graphics */
+    text-align: left;
+    
+    /* 🚨 REMOVE FLEX DIRECTION WRAPPING CONSTRAINTS FROM THE NAVBAR: */
+    flex-direction: column !important; 
+}
+
+/* 3. Style the links INSIDE the floating white box */
+.dropdown-menu a {
+    color: #333333 !important;      /* Dark charcoal text for readability on white */
+    padding: 12px 20px !important;  /* Inner padding space */
+    display: block !important;       /* Forces them to stack vertically on separate lines! */
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    text-transform: none !important; /* Removes massive uppercase style tracking */
+    letter-spacing: normal !important;
+    white-space: nowrap;            /* Prevents long text lines from cutting or wrapping early */
+}
+
+/* 4. Smooth hover highlight inside the floating box */
+.dropdown-menu a:hover {
+    background-color: #f5f5f5 !important; /* Light gray background frame hover tint */
+    color: #4a7751 !important;            /* Turns your text to matching theme forest green */
+}
+
+/* 5. 🔓 THE HOVER ACTION TRIGGER TRIGGER ENGINE */
+.dropdown:hover .dropdown-menu {
+    display: flex !important; /* Instantly changes display structure to flex column on mouseover */
+}
+
   </style>
 </head>
 <body class="home-page">
@@ -245,14 +293,24 @@
  <span>GHANAIAN COMMUNITY IN BELARUS</span>
 </a>
     <nav class="menu">
-      <a href="index.html">HOME</a>
-      <a href="news.html">NEWS</a>
-      <a href="about-.html">ABOUT US</a>
-      <a href="events.html">EVENTS</a>
-      <a href="gallery.html" class="active">GALLERY</a>
-      <a href="support.html">SUPPORT</a>
-      <a href="business.html">BUSINESS & EDUCATION</a>
-      <a href="contact.html">CONTACT</a>
+        <a href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+
+        <!-- 🟢 START OF DROPDOWN BLOCK (Paste this exactly in place of line 161) -->
+        <div class="dropdown">
+            <a href="about.html" class="dropdown-trigger">ABOUT US ▾</a>
+            <div class="dropdown-menu">
+                <a href="constitution.html">Constitution</a>
+                <a href="executives.html">Executives</a>
+            </div>
+        </div>
+        <!-- 🛑 END OF DROPDOWN BLOCK -->
+
+        <a href="events.html">EVENTS</a>
+        <a href="gallery.html" class="active">GALLERY</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="business.html">BUSINESS & EDUCATION</a>
+        <a href="contact.html">CONTACT</a>
     </nav>
   </div>
 </header>
@@ -301,7 +359,6 @@
         <p>
           <a href="index.html">Home</a> •
           <a href="news.html">News</a> •
-          <a href="about.html">About</a> •
           <a href="events.html">Events</a> •
           <a href="gallery.html">Gallery</a> •
           <a href="support.html">Support</a> •
