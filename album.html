@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVHD7M3ZL8"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVHD7M3ZL8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,11 +9,11 @@
 
   gtag('config', 'G-ZVHD7M3ZL8');
 </script>
-  <meta charset="UTF-8" />
-  <title>Ghanaian Community in Belarus – Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="images/png" href="images/main.png?v=2">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghanaian Community in Belarus – Album</title>
+    <link rel="icon" type="images/png" href="images/main.png?v=2">
+    <style>
     :root {
       --red: #ce1126;
       --gold: #fcd116;
@@ -90,21 +89,24 @@
       margin-top: 0;
       font-size: 1.6rem;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: var(--white);
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 16px;
-    }
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.15rem;
-    }
+    /* 1. Change your grid to a flex column so the photos stack vertically */
+.grid, .photo-grid-wall {
+    display: flex;
+    flex-direction: column;   /* Stacks your images one on top of the other */
+    gap: 35px;                /* Creates a beautiful vertical space gap between each photo */
+    max-width: 900px;         /* Limits the content column width so it looks professional */
+    margin: 30px auto;        /* Centers the whole layout column dead-center on your screen */
+}
+
+/* 2. 🟢 THE FIX: Style the individual images inside the container */
+.grid img, .photo-grid-wall img {
+    width: 100%;              /* Forces the picture to fill the full width of your 900px column */
+    height: auto;            /* 🟢 Sets a large, impactful height for your gallery pictures */
+    object-fit: cover;        /* Crops your photos cleanly without distorting or squishing them */
+    border-radius: 12px;      /* Modern rounded corners to match your homepage theme */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Soft drop shadow frame for extra polish */
+}
+
 
     footer {
       background: #111;
@@ -191,71 +193,83 @@
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a class="brand" href="index.html">
-  <img
-    src="images/ghana1.jpg"
-    alt="Ghanaian Community in Belarus logo"
-    class="site-logo"
-  />
- <span>GHANAIAN COMMUNITY IN BELARUS</span>
-</a>
-    <nav class="menu">
-        <a href="index.html">HOME</a>
-        <a href="news.html">NEWS</a>
-
-        <!-- 🟢 START OF DROPDOWN BLOCK (Paste this exactly in place of line 161) -->
-        <div class="dropdown">
+    <!-- Complete Edge-to-Edge Navigation Banner Section -->
+    <header>
+        <div class="nav-container">
+            <nav class="nav">
+                <a class="brand" href="index.html">
+                    <img src="images/ghana1.jpg" alt="Logo" class="site-logo">
+                    <span>GHANA COMMUNITY IN BELARUS</span>
+                </a>
+                <div class="menu">
+                    <a href="index.html">HOME</a>
+                    <a href="news.html">NEWS</a>
+                    <div class="dropdown">
             <a href="about.html" class="dropdown-trigger">ABOUT US ▾</a>
             <div class="dropdown-menu">
                 <a href="constitution.html">Constitution</a>
                 <a href="executives.html">Executives</a>
             </div>
+                    </div>
+                    <a href="events.html">EVENTS</a>
+                    <a href="gallery.html" class="active">GALLERY</a>
+                    <a href="support.html">SUPPORT</a>
+                    <a href="business.html">BUSINESS & EDUCATION</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </nav>
         </div>
-        <!-- 🛑 END OF DROPDOWN BLOCK -->
+    </header>
 
-        <a href="events.html">EVENTS</a>
-        <a href="gallery.html" class="active">GALLERY</a>
-        <a href="support.html">SUPPORT</a>
-        <a href="business.html">BUSINESS & EDUCATION</a>
-        <a href="contact.html">CONTACT</a>
-    </nav>
-  </div>
-</header>
+    <!-- Padded Central Display Module -->
+    <main class="album-body-wrapper">
+        <a href="gallery.html" class="back-btn"><b>← Back to MAIN GALLERY</b></a>
+        
+        <h1 id="album-title">Loading Album...</h1>
+        <p id="album-description" class="album-desc"></p>
+        
+        <hr style="border: 0; border-top: 1px solid #eaeaea; margin-bottom: 30px;">
+        
+        <!-- Automated Image Placement Box Slot -->
+        <div id="photo-wall" class="photo-grid-wall"></div>
+    </main>
 
-<main>
-  <section>
-    <div class="container">
-      <h2>Support & Integration</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Language & Settlement</h3>
-          <p>
-            Russian/Belarusian language circles, document checklists for residence permits,
-            and tips for housing, banking, and healthcare.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Health & Well‑being</h3>
-          <p>
-            Periodic health talks (e.g., breast cancer awareness), mental health resources,
-            and connections to friendly clinics and interpreters.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Students in Belarus</h3>
-          <p>
-            Guidance for Ghanaian students on admission, visas/eVisa, and settling in,
-            including English‑medium programs and Russian language preparatory courses.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+    <!-- Dynamic JavaScript Sync Module Engine -->
+    <script>
+        // 1. Scan the link address bar parameters to read the targeted unique Album ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentAlbumId = urlParams.get('albumId');
 
-<footer>
+        // 2. Fetch data from your fresh gallery database array file
+        fetch('gallery.json')
+            .then(response => response.json())
+            .then(albums => {
+                // 3. Find the exact layout row item row matching the URL key
+                const matchedAlbum = albums.find(a => a.id === currentAlbumId);
+                
+                if (matchedAlbum) {
+                    // 4. Update head title slots and empty block page tags instantly
+                    document.title = matchedAlbum.title + " | Gallery";
+                    document.getElementById('album-title').innerText = matchedAlbum.title;
+                    document.getElementById('album-description').innerText = matchedAlbum.description;
+
+                    const wall = document.getElementById('photo-wall');
+                    wall.innerHTML = ''; // Safely clears out "loading" indicators
+
+                    // 5. Loop through every folder target array listed under "photos" properties
+                    matchedAlbum.photos.forEach(photoPath => {
+                        const img = document.createElement('img');
+                        img.src = photoPath; // Directly loads out of your /article folder resource path
+                        img.alt = "Community Event Photo";
+                        wall.appendChild(img);
+                    });
+                } else {
+                    document.getElementById('album-title').innerText = "Album Folder Not Found";
+                }
+            })
+            .catch(error => console.error('Error rendering dynamic album grid arrays:', error));
+    </script>
+    <footer>
   <div class="container">
     <div class="grid">
       <div>
@@ -266,15 +280,15 @@
       </div>
       <div>
         <strong>Quick links</strong>
-        <p>
-          <a href="index.html">Home</a> •
-          <a href="news.html">News</a> •
-          <a href="events.html">Events</a> •
-          <a href="gallery.html">Gallery</a> •
-          <a href="support.html">Support</a> •
-          <a href="business.html">Business & Education</a> •
-          <a href="contact.html">Contact</a>
-        </p>
+       <p>
+      <a href="index.html">Home</a> •
+      <a href="news.html">News</a> •
+      <a href="events.html">Events</a> •
+      <a href="gallery.html">Gallery</a> •
+      <a href="support.html">Support</a> •
+      <a href="business.html">Business & Education</a> •
+      <a href="contact.html">Contact</a>
+    </p>
       </div>
       <div>
         <strong>Contact</strong>
@@ -292,6 +306,5 @@
     Ghanaian Community Belarus</p>
     <p style="font-size: 10px;">designed and developed by steve- email:stephenamoako2002@gmail.com</p>
 </footer>
-
 </body>
 </html>

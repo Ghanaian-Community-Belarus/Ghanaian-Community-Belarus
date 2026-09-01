@@ -19,6 +19,7 @@
       --red: #ce1126;
       --gold: #fcd116;
       --green: #006b3f;
+      --black: #000000;
       --bg: #f7f7f7;
       --text: #222;
       --muted: #555;
@@ -26,7 +27,6 @@
     }
 
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -35,23 +35,16 @@
       line-height: 1.5;
     }
 
-    a {
-      color: var(--red);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 16px;
     }
-
     header {
-      background: linear-gradient(90deg,  var(--green));
+     background: linear-gradient(90deg,  var(--green));
       color: var(--white);
       padding: 16px 0;
       position: sticky;
@@ -59,7 +52,6 @@
       z-index: 10;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-
     .nav {
       display: flex;
       align-items: center;
@@ -67,83 +59,87 @@
       gap: 16px;
       flex-wrap: wrap;
     }
-
     .brand {
       font-size: 1.25rem;
       font-weight: 700;
+      letter-spacing: 0.3px;
       color: var(--white);
       text-decoration: none;
     }
-
     .menu {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
-
     .menu a {
       color: var(--white);
       font-weight: 600;
       padding: 6px 10px;
       border-radius: 6px;
     }
-
-    .menu a:hover,
-    .menu a.active {
+    .menu a:hover {
       background: rgba(255,255,255,0.18);
       text-decoration: none;
     }
 
     section {
-      padding: 40px 0;
+      padding: 32px 0;
     }
-
-    h1 {
+    section h2 {
       margin-top: 0;
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
+ /* 1. Stacks your event rows vertically on top of each other */
+.grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 35px;              /* Comfortable spacing between separate rows */
+    max-width: 950px;       /* Slightly wider layout limit to accommodate a larger image */
+    margin: 40px auto;      /* Centers the whole page content structure left-to-right */
+    padding: 0 30px;
+}
 
-    .intro {
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 28px;
-    }
+/* 2. 🟢 THE PIC SIZE FIX: Adjusts columns so the image gets more layout room */
+.gallery-card {
+    display: grid;
+    /* 1fr 1.2fr means the Text takes 45% space, and the Image takes 55% space! */
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 40px;                        /* Generates a clean gap between the text block and your picture */
+    align-items: center;              /* Vertically aligns your title text with the picture center line */
+    background: var(--white);
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+}
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
+/* 3. 🟢 THE HEIGHT FIX: Expands the vertical bounds of the photo container */
+.card-image-box {
+    width: 100%;
+    height: 300px;      /* 🟢 Increased from 240px to 300px to make the photo stand out */
+    overflow: hidden;
+    border-radius: 8px; /* Clean rounded edges all around the photo frame bounds */
+}
 
-    .photo-card {
-      background: var(--white);
-      border: 1px solid #e8e8e8;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+/* 4. Ensures your sports and event photos stretch smoothly without squishing */
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Crops your pictures cleanly inside the new larger frame box */
+}
 
-    .photo-card img {
-      width: 100%;
-      height: 220px;
-      display: block;
-      object-fit: cover;
-      background: #ddd;
-    }
+/* Removes top margin space from titles so they line up evenly with the image top */
+.card-text-box {
+    padding: 0;
+}
 
-    .photo-card p {
-      padding: 12px 14px;
-      margin: 0;
-      font-weight: 600;
-    }
+.card-text-box h3 {
+    margin-top: 0;
+    font-size: 1.7rem;   /* Marginally increased font size to match the bigger picture layout */
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
 
-    .empty-photo {
-      height: 220px;
-      display: grid;
-      place-items: center;
-      color: #777;
-      background: #e7e7e7;
-      font-size: 1rem;
-    }
 
     footer {
       background: #111;
@@ -151,15 +147,8 @@
       padding: 24px 0;
       margin-top: 24px;
     }
-
-    footer a {
-      color: #fff;
-    }
-
-    .small {
-      font-size: 0.9rem;
-      color: #bbb;
-    }
+    footer a { color: #fff; }
+    .small { font-size: 0.9rem; color: #bbb; }
     .brand {
   display: flex;
   align-items: center;
@@ -271,53 +260,49 @@
   </div>
 </header>
 
-<main>
-  <section>
-    <div class="container">
-      <h1>Community Gallery</h1>
-      <p class="intro">
-        Photos from our community events, meetings, cultural celebrations, sports activities,
-        and student life in Belarus.
-      </p>
+<main class="gallery-body-wrapper">
+    <h2>Community Gallery</h2>
+    <p class="small">Photos from our community events, football matches, and administrative meetings.</p>
+    
+    <hr style="border: 0; border-top: 1px solid #eaeaea; margin-bottom: 40px;">
 
-      <div class="gallery-grid">
-
-        <!-- Replace each empty-photo block with an image when available -->
-        <div class="photo-card">
-          <div class="empty-photo">Add event photo here</div>
-          <p>Community Meeting – Minsk</p>
-        </div>
-
-        <div class="photo-card">
-          <div class="empty-photo">Add event photo here</div>
-          <p>Ghanaian Cultural Celebration</p>
-        </div>
-
-        <div class="photo-card">
-          <div class="empty-photo">Add event photo here</div>
-          <p>Football and Sports Day</p>
-        </div>
-
-        <div class="photo-card">
-          <div class="empty-photo">Add event photo here</div>
-          <p>Student Networking Event</p>
-        </div>
-
-        <div class="photo-card">
-          <div class="empty-photo">Add event photo here</div>
-          <p>Community Support Session</p>
-        </div>
-
-        <div class="photo-card">
-          <img src="football-day.jpg" alt="Community football day in Minsk" />
-          <p>End-of-Year Celebration</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+    <!-- This is the empty hook where your script automatically builds the album grid -->
+    <div id="gallery-albums-feed" class="grid"></div>
 </main>
+<script>
+    // 1. Fetch your clean consolidated image directory json vault
+    fetch('gallery.json')
+        .then(response => response.json())
+        .then(albums => {
+            const feedContainer = document.getElementById('gallery-albums-feed');
+            feedContainer.innerHTML = ''; // Clear default loaders
 
+            // 2. Loop through every single structural object row in your JSON array
+            albums.forEach(album => {
+                const card = document.createElement('div');
+                card.className = 'gallery-card'; // Keeps your CSS card connection working
+
+                // 3. Assemble components dynamically passing matching URL parameters (?albumId=...)
+                card.innerHTML = `
+                    <div class="card-image-box">
+                        <a href="album.html?albumId=${album.id}">
+                            <img src="${album.coverImage}" alt="Event Cover Photo">
+                        </a>
+                    </div>
+                    <div class="card-text-box">
+                        <h3>
+                            <a href="album.html?albumId=${album.id}" class="album-link">
+                                ${album.title}
+                            </a>
+                        </h3>
+                        <p>${album.description}</p>
+                    </div>
+                `;
+                feedContainer.appendChild(card);
+            });
+        })
+        .catch(error => console.error('Error compiling automated album catalog rows:', error));
+</script>
 <footer>
   <div class="container">
     <p>
@@ -335,6 +320,9 @@
       Email: ghanacommunityby@gmail.com
     </p>
   </div>
+  <p style="text-align:right;line-height:1.2;font-size:10px;">&copy; All right reserved<br>
+    Ghanaian Community Belarus</p>
+    <p style="font-size: 10px;">designed and developed by steve- email:stephenamoako2002@gmail.com</p>
 </footer>
 
 </body>
